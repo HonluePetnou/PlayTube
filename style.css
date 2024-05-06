@@ -2,12 +2,15 @@
     --primary: rgb(252,13,27);
     --tertiary: rgb(202,8,19);
     --white: rgb(255,255,255);
+    --gray: rgb(165,165,165);
     --black: rgb(15,15,15);
     --black2: rgb(35,35,35);
     --black3: rgb(25,25,25);
+    --black4: rgb(39,39,39);
 
 
     --TextSize: 20px;
+    --sideBarHeight: 70px;
   }
 body{
     margin: 0;
@@ -22,6 +25,7 @@ body{
     background-color: var(--black);
     height: 60px;
     width: 100%;
+    position: static;
 }
 .logoNav{
     display: flex;
@@ -38,7 +42,7 @@ body{
     color: var(--white);
     font-size: var(--TextSize);
     letter-spacing: -1.5px;
-    padding-left: 4px;
+    padding-left: 2px;
 }
 .iconButton{
     height: 40px;
@@ -129,20 +133,129 @@ input[type=search]:focus{
     flex-direction: row;
     height: 100%;
     width: 100%;
-}
-.mainBody{
-    flex-basis: 95%;
     background-color: aqua;
-    height: auto;
 }
 .sidebar{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     flex-basis: 5%;
-    background-color: red;
+    background-color: var(--black);
+    position: static;
+    width: var(--sideBarHeight);
+    /* height: fit-content%; */
+}
+.sideItem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
     height: auto;
 }
+.iconButton2>i{
+    padding-bottom: 8px;
+    color: var(--white);
+}
+.iconButton2>span{
+    color: var(--white);
+    font-size: 12px;
+}
+.iconButton2{
+    height: 100%;
+    width: 85%;
+    padding: 12px;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    background: none;
+}
+.iconButton2:hover{
+    height: 100%;
+    width: 85%;
+    padding: 12px;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--black2);
+}
+.mainBody{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--black);
+    flex-basis: 95%;
+    height: 100%;
+    width: 100%;
+}
+.buttonGroup{
+    display: flex;
+    flex-direction: row;
+    padding-top: 12px;
+    padding-bottom: 24px;
+    padding-left: 24px;
+    padding-right: 32px;
+}
+.bodyButton{
+    padding-left: 12px;
+    padding-right: 12px;
+    width: auto;
+    height: 35px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    text-align: center;
+    background-color: var(--black4);
+    color: var(--white);
+    margin-right: 12px;
+}
+.bBActive{
+    color: var(--black4);
+    background-color: var(--white);
+}
+.cardGroup{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 12px;
+    padding-left: 32px;
+    padding-right: 32px;
+    color: #ffffff;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    width: 32%;
+    height: auto;
+}
+.carImage{
+    height: 250px;
+    width: 100%;
+    border-radius: 12px;
+}
+.data{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: 12px;
+}
+.about{
+    padding-left: 16px;
+    display: flex;
+    flex-direction: column;
+}
+.autorText{
+    display: inline-flex;
+    flex-direction: column;
+    padding-top: 4px;
+}
+.subText{
+    font-size: small;
+    color: var(--gray);
+    padding-top: 2px;
+}
 
-/* responsiveness of the header */
-/* @media (min-width: 900px) and (max-width: 1024px) {
+@media (min-width: 900px) and (max-width: 1024px) {
     .mainSearch {
       width: 350px;
       height: 38px;
@@ -164,4 +277,4 @@ input[type=search]:focus{
     .search {
       display: none;
     }
-  } */
+  }
